@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+body{
+    background-color: #000;
+}
+
+.tituloFecha{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tituloHoras{
+    font-family: 'Londrina Outline', cursive;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+}
+
+.boton{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.btnGreen{
+    background: #7bffce;
+}
+
+.btnBlue{
+    background: #7bdaff;
+}
+
+.btnPink{
+    background: #ff7bac;
+}
+
+/* efecto de neon */
+
+.green{
+    text-shadow: 
+    0 0 5px #7bffce,
+    0 0 10px #7bffce,
+    0 0 20px #7bffce,
+    0 0 40px #7bffce,
+    0 0 80px #7bffce,
+    0 0 90px #7bffce,
+    0 0 100px #7bffce,
+    0 0 150px #7bffce;
+}
+
+.blue{
+    text-shadow: 
+    0 0 5px #7bdaff,
+    0 0 10px #7bdaff,
+    0 0 20px #7bdaff,
+    0 0 40px #7bdaff,
+    0 0 80px #7bdaff,
+    0 0 90px #7bdaff,
+    0 0 100px #7bdaff,
+    0 0 150px #7bdaff;
+}
+
+.pink{
+    text-shadow: 
+    0 0 5px #ff7bac,
+    0 0 10px #ff7bac,
+    0 0 20px #ff7bac,
+    0 0 40px #ff7bac,
+    0 0 80px #ff7bac,
+    0 0 90px #ff7bac,
+    0 0 100px #ff7bac,
+    0 0 150px #ff7bac;
+}
