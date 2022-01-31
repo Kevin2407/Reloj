@@ -5,6 +5,22 @@ body{
     background-color: #000;
 }
 
+#contenedorPrincipal {
+    text-shadow: 
+    0 0 5px #7bdaff,
+    0 0 10px #7bdaff,
+    0 0 20px #7bdaff,
+    0 0 40px #7bdaff,
+    0 0 80px #7bdaff,
+    0 0 90px #7bdaff,
+    0 0 100px #7bdaff,
+    0 0 150px #7bdaff;
+}
+
+#botonSet {
+    background-color: #7bdaff;
+}
+
 .tituloFecha{
     font-family: 'Orbitron', sans-serif;
     font-size: 2em;

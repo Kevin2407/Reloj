@@ -1,26 +1,46 @@
-function cambiarColor(color){
-    let seccion = document.getElementById('contenedorPrincipal');
-    
+let seccion = document.getElementById('contenedorPrincipal');
+let color = document.getElementById('setcolor');
+let boton = document.getElementById('botonSet');
 
-    switch(color){
-        case "pink":
-            seccion.className = 'mt-5 w-75 text-light pink';
-            break;
-        case "blue":
-            seccion.className = 'mt-5 w-75 text-light blue';
-            break;
-        case "green":
-            seccion.className = 'mt-5 w-75 text-light green';
-    }
+
+function cambiarColor(){
+
+    // switch(color){
+    //     case "pink":
+    //         seccion.className = 'mt-5 w-75 text-light pink';
+    //         break;
+    //     case "blue":
+    //         seccion.className = 'mt-5 w-75 text-light blue';
+    //         break;
+    //     case "green":
+    //         seccion.className = 'mt-5 w-75 text-light green';
+    // }
+
+    seccion.style.cssText = `text-shadow: 
+    0 0 5px ${color.value},
+    0 0 10px ${color.value},
+    0 0 20px ${color.value},
+    0 0 40px ${color.value},
+    0 0 80px ${color.value},
+    0 0 90px ${color.value},
+    0 0 100px ${color.value},
+    0 0 150px ${color.value};`;
+
+}
+
+function cambiarColorBoton() {
+    boton.style.background = color.value;
 }
 
 function actualizarHora(){
+    // obtener los datos del dia y hora actual
     let fecha = new Date(),
         horas = fecha.getHours(),
         minutos = fecha.getMinutes(),
         segundos = fecha.getSeconds();
     // console.log(fecha);
 
+    // agregar un 0 a los numeros menoes a 10
     if(horas < 10){
         horas = '0'+horas
     }
@@ -31,6 +51,7 @@ function actualizarHora(){
         segundos = '0'+segundos
     }
 
+    // declarar elementos del html
     let pHoras = document.getElementById('horas'),
         pMinutos = document.getElementById('minutos'),
         pSegundos = document.getElementById('segundos'),
@@ -39,6 +60,7 @@ function actualizarHora(){
         pMes = document.getElementById('mes'),
         pAnio = document.getElementById('anio');
 
+    // declarar dias y meses e arreglos
     let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves','Viernes','Sabado']
 
     let meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
@@ -56,6 +78,10 @@ function actualizarHora(){
 }
 
 window.setInterval(actualizarHora,1000);
+
+color.addEventListener("input", cambiarColorBoton);
+
+boton.addEventListener("click",cambiarColor);
 
 
 
